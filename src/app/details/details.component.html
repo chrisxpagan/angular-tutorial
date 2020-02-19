@@ -1,0 +1,14 @@
+<button
+  class="btn btn-primary"
+  (click)="toggleShowDetails(); addActionToLog()">
+  Display Details
+</button>
+<p [hidden]="hideDetails">Who lives in a pineapple under the sea?</p>
+<ol>
+  <li
+    *ngFor="let clickAction of clickActions"
+    [ngStyle]="{background: clickAction[0] >= 5 ? 'blue' : ''}"
+    [ngClass]="{'special-log': clickAction[0] >= 5}">
+    {{ clickAction[1] }}
+  </li>
+</ol>
