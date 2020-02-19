@@ -6,9 +6,9 @@
 <p [hidden]="hideDetails">Who lives in a pineapple under the sea?</p>
 <ol>
   <li
-    *ngFor="let clickAction of clickActions"
-    [ngStyle]="{background: clickAction[0] >= 5 ? 'blue' : ''}"
-    [ngClass]="{'special-log': clickAction[0] >= 5}">
-    {{ clickAction[1] }}
+    *ngFor="let clickAction of clickActions; let i = index"
+    [ngStyle]="{background: i >= 4 ? 'blue' : ''}"
+    [ngClass]="{'special-log': i >= 4}">
+    {{ clickAction }}
   </li>
 </ol>

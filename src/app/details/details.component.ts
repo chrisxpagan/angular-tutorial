@@ -12,7 +12,7 @@ import { ThrowStmt } from '@angular/compiler';
 })
 export class DetailsComponent implements OnInit {
   hideDetails: boolean = false;
-  clickActions: any[] = [];
+  clickActions: string[] = [];
 
 
   constructor() {
@@ -27,7 +27,7 @@ export class DetailsComponent implements OnInit {
   }
 
   addActionToLog(): void {
-    this.clickActions.push([this.clickActions.length + 1,  "Button clicked at: " + new Date()]);
+    this.clickActions.push("Button clicked at: " + new Date());
   }
 
 }
